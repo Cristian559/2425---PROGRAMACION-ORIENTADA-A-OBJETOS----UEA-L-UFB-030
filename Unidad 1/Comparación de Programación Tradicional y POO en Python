@@ -1,0 +1,69 @@
+# Función para obtener las temperaturas diarias
+def ingresar_temperaturas():
+    temperaturas = []
+    for i in range(7):
+        temp = float(input(f"Ingrese la temperatura del día {i+1}: "))
+        temperaturas.append(temp)
+    return temperaturas
+
+# Función para calcular el promedio semanal
+def calcular_promedio(temperaturas):
+    return sum(temperaturas) / len(temperaturas)
+
+# Función principal que organiza las tareas
+def main():
+    # Ingresar las temperaturas
+    temperaturas = ingresar_temperaturas()
+    
+    # Calcular el promedio semanal
+    promedio = calcular_promedio(temperaturas)
+    
+    # Mostrar el resultado
+    print(f"El promedio semanal de las temperaturas es: {promedio:.2f}°C")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
+class Clima:
+    def __init__(self):
+        # Atributo que almacenará las temperaturas de los 7 días
+        self.temperaturas = []
+
+    def ingresar_temperaturas(self):
+        # Método para ingresar las temperaturas
+        for i in range(7):
+            temp = float(input(f"Ingrese la temperatura del día {i+1}: "))
+            self.temperaturas.append(temp)
+
+    def calcular_promedio(self):
+        # Método para calcular el promedio de las temperaturas
+        return sum(self.temperaturas) / len(self.temperaturas)
+
+# Función principal que organiza las tareas
+def main():
+    # Crear una instancia de la clase Clima
+    clima = Clima()
+
+    # Ingresar las temperaturas
+    clima.ingresar_temperaturas()
+
+    # Calcular el promedio semanal
+    promedio = clima.calcular_promedio()
+
+    # Mostrar el resultado
+    print(f"El promedio semanal de las temperaturas es: {promedio:.2f}°C")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
+/Repositorio-Clima
+    |-- clima_tradicional.py  # Código de Programación Tradicional
+    |-- clima_poo.py          # Código de Programación Orientada a Objetos
+    |-- README.md             # Descripción del repositorio
+# Función para ingresar las temperaturas diarias
+def ingresar_temperaturas():
+    temperaturas = []  # Lista vacía para almacenar las temperaturas
+    for i in range(7):  # Iterar por los 7 días de la semana
+        temp = float(input(f"Ingrese la temperatura del día {i+1}: "))  # Solicitar temperatura
+        temperaturas.append(temp)  # Agregar la temperatura a la lista
+    return temperaturas  # Devolver la lista de temperaturas
